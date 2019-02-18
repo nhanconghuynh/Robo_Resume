@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.ArrayList;
@@ -11,8 +12,9 @@ public class Robo_Resume {
     private String email;
 
     private ArrayList<Education> education = new ArrayList<>();
+    private ArrayList<Experience> experience = new ArrayList<>();
 
-
+    private Skills skillset = new Skills();
 
     Robo_Resume () {
         name = "";
@@ -24,31 +26,49 @@ public class Robo_Resume {
 
     public String displayResume() {
 
+    //    this.skillset.setSkills(new HashMap<String,String>());
+    //    this.skillset.getSkills().put("Java", "Advanced");
+
+
+
+
         if (phone.equals("") && email.equals(""))
 
                 return "=============================" + "\n" +
-                        name + "\n\n" + this.printEducation(education);
+                        name + "\n\n" +
+                        this.displayEducation(education) +
+                        this.displayExperience(experience) +
+                        this.skillset.displaySkills();
 
         else if (phone.equals(""))
 
                 return "=============================" + "\n" +
-                        name + "\n" + email + "\n\n" + this.printEducation(education);
+                        name + "\n" + email + "\n\n" +
+                        this.displayEducation(education) +
+                        this.displayExperience(experience) +
+                        this.skillset.displaySkills();
 
         else if (email.equals(""))
 
                 return "=============================" + "\n" +
-                        name + "\n" + phone + "\n\n" + this.printEducation(education);
+                        name + "\n" + phone + "\n\n" +
+                        this.displayEducation(education) +
+                        this.displayExperience(experience)+
+                        this.skillset.displaySkills();
 
         else
             return "=============================" + "\n" +
                         name + "\n" +
                         phone + "\n" +
-                        email + "\n\n" + this.printEducation(education);
+                        email + "\n\n" +
+                        this.displayEducation(education) +
+                        this.displayExperience(experience)+
+                        this.skillset.displaySkills();
 
 
     }
 
-    public String printEducation(ArrayList<Education> education) {
+    public String displayEducation(ArrayList<Education> education) {
         String display_education = "";
         for (int i=0; i < education.size(); i++)
             display_education = display_education + education.get(i).displayEducation() + "\n";
@@ -56,6 +76,14 @@ public class Robo_Resume {
         return "Education" + "\n" + display_education;
     }
 
+
+    public String displayExperience(ArrayList<Experience> experience) {
+        String display_experience = "";
+        for (int i=0; i < experience.size(); i++)
+            display_experience = display_experience + experience.get(i).displayExperience() + "\n";
+
+        return "Experience" + "\n" + display_experience;
+    }
 
 
     public String getName() {
@@ -148,13 +176,21 @@ public class Robo_Resume {
         this.education =  education;
     }
 
- /*   public Skills getSkills() {
-        return skills;
+    public ArrayList<Experience> getExperience() {
+        return experience;
     }
 
-    public void setSkills(Skills skills) {
-        this.skills = skills;
-    } */
+    public void setExperience(ArrayList<Experience> experience) {
+        this.experience = experience;
+    }
+
+    public Skills getSkillset() {
+        return skillset;
+    }
+
+    public void setSkillset(Skills skillset) {
+        this.skillset = skillset;
+    }
 }
 
 

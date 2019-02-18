@@ -21,7 +21,7 @@ public class ResumeApp {
         Robo_Resume e = new Robo_Resume();
 
         Resume_DB z = new Resume_DB();
-        z.AddResume(a,b, c, d, e);
+        z.AddResume(a, b, c, d, e);
  //       System.out.println(a.displayResume());
         System.out.println(c.displayResume());
 
