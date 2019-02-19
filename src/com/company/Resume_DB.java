@@ -1,6 +1,6 @@
 package com.company;
 
-
+import java.util.LinkedHashMap;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -8,15 +8,17 @@ import java.util.Scanner;
 
 public class Resume_DB extends Robo_Resume {
 
+    private LinkedHashMap<String, Robo_Resume> list_resumes;
+
 
     public static void AddResume(Robo_Resume a, Robo_Resume b, Robo_Resume c, Robo_Resume d, Robo_Resume e) {
         a.setName("Nhan Huynh");
         a.setPhone("123456789");
         a.setEmail("cool_guy@gmail.com");
 
-        b.setName("Dave");
-        b.setPhone("Wolf");
-        b.setEmail("987654321");
+        b.setName("Dave Wolf");
+        b.setPhone("987654321");
+
 
         c.setName("John Jingleheimer-Schmidt");
         c.setEmail("jjjschmidt@gmail.com");
@@ -57,7 +59,12 @@ public class Resume_DB extends Robo_Resume {
         c.getSkillset().getSkills().put("Ruby on Rails", "Novice");
         c.getSkillset().getSkills().put("Perl", "Fundamental");
 
+        d.setName("John Doe");
+        d.setEmail("john.doe@gmail.com");
 
+        e.setName("Jane Doe");
+        e.setPhone("571-2345-678");
+        e.setEmail("jane.doe@outlook.com");
 
 
 

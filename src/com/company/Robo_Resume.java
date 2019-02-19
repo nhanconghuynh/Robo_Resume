@@ -34,7 +34,7 @@ public class Robo_Resume {
 
         if (phone.equals("") && email.equals(""))
 
-                return "=============================" + "\n" +
+                return "--------------------------------------------" + "\n" +
                         name + "\n\n" +
                         this.displayEducation(education) +
                         this.displayExperience(experience) +
@@ -42,7 +42,7 @@ public class Robo_Resume {
 
         else if (phone.equals(""))
 
-                return "=============================" + "\n" +
+                return "-------------------------------------------" + "\n" +
                         name + "\n" + email + "\n\n" +
                         this.displayEducation(education) +
                         this.displayExperience(experience) +
@@ -50,14 +50,14 @@ public class Robo_Resume {
 
         else if (email.equals(""))
 
-                return "=============================" + "\n" +
+                return "-------------------------------------------" + "\n" +
                         name + "\n" + phone + "\n\n" +
                         this.displayEducation(education) +
                         this.displayExperience(experience)+
                         this.skillset.displaySkills();
 
         else
-            return "=============================" + "\n" +
+            return "-------------------------------------------" + "\n" +
                         name + "\n" +
                         phone + "\n" +
                         email + "\n\n" +
