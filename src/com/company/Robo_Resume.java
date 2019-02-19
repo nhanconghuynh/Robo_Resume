@@ -86,6 +86,9 @@ public class Robo_Resume {
     }
 
 
+
+
+
     public String getName() {
 
         if (this.validateName(name))
@@ -103,7 +106,13 @@ public class Robo_Resume {
 
     public static boolean validateName( String name)
     {
-        return name.matches( "[A-Z][a-z]+( [A-Z][a-z]+)?");
+
+        if (name.matches("[A-Z][a-z]+( [A-Z][a-z]+)?")) return true;
+        else if (name.matches("[A-Z][a-z]+( [A-Z])+[a-z]+[A-Z][a-z]+?")) return true;
+        else if (name.matches("[A-Z][a-z]+( [A-Z][\\'\\-\\.][A-Z][a-z]+)?")) return true;
+        else if (name.matches("[A-Z][a-z]+( [A-Z])+[a-z]+[\\'\\-\\.][A-Z][a-z]+?")) return true;
+        else if (name == null) return false;
+        else return false;
     }
 
     public String getPhone() {
@@ -134,6 +143,7 @@ public class Robo_Resume {
         //validating phone number where area code is in braces ()
     else if(phone.matches("\\(\\d{3}\\)-\\d{3}-\\d{4}")) return true;
         //return false if nothing matches the input
+    else if (phone == null) return false;
     else return false;
 
 }

@@ -15,19 +15,15 @@ public class ResumeApp {
     public static void main(String[] args) {
 
 
-
-
-
-
-        /*        Robo_Resume a = new Robo_Resume();
+/*      Robo_Resume a = new Robo_Resume();
         Robo_Resume b = new Robo_Resume();
         Robo_Resume c = new Robo_Resume();
         Robo_Resume d = new Robo_Resume();
         Robo_Resume e = new Robo_Resume();
 
- //       Resume_DB z = new Resume_DB();
-//        z.AddResume(a, b, c, d, e);
- //       System.out.println(a.displayResume());
+       Resume_DB z = new Resume_DB();
+       z.AddResume(a, b, c, d, e);
+       System.out.println(a.displayResume());
 
 */
 
@@ -36,7 +32,7 @@ public class ResumeApp {
         int resume_counter = 0;
 
         boolean main_menu = true;
-        String candidate_name = "";
+
 
         int selection = 0;
 
@@ -45,7 +41,7 @@ public class ResumeApp {
 
         while (main_menu) {
 
-            System.out.println("\nWelcome to Beginner's Resume Application" + "\n=============================================");
+            System.out.println((char)27 + "[34m" + "\nWelcome to Beginner's Resume Application" + "\n=============================================" + (char)27 + "[30m");
             System.out.println("\nPlease select one of the numerical option below:");
             System.out.println("1. Input new resume data");
             System.out.println("2. View resume of specific candidate");
@@ -59,25 +55,16 @@ public class ResumeApp {
                     break;
 
                 case 2:
-                    System.out.println("\nEnter name of candidate on resume you want to view: ");
-                    candidate_name = keybd.nextLine();
-                    System.out.println(candidate_name);
-                    main_menu = true;
-                    //System.out.println(resume_db.get(0).displayResume());
-                    /*
-                    for (int i = 0; i < resume_db.size(); i++) {
-                        //resume_map.put(resume_db.get(i).getName(), resume_db.get(i));
-                        if (resume_db.get(i).getName().equalsIgnoreCase(candidate_name)) {
-                            System.out.println(resume_db.get(i).displayResume());
-                            System.out.println("------------------------------------------");
-                        }
-                    } */
+                    viewResume(resume_db);
+
                     break;
 
                 case 3:
-                break;
+                    changeResume(resume_db);
+
+                    break;
                 case 4:
-                break;
+                    break;
                 case 5:
                     for (int i = 0; i < resume_db.size(); i++) {
                         System.out.println(resume_db.get(i).displayResume());
@@ -85,75 +72,189 @@ public class ResumeApp {
                     }
                     main_menu = false;
 
-                break;
-                default: System.out.println("Invalid selection");
-                break;
+                    break;
+                default:
+                    System.out.println("Invalid selection.");
+                    break;
             }
 
-            //       System.out.println(c.displayResume());
         }
     }
 
 
-  /*  public void main_menu() {
+    public static void viewResume(ArrayList<Robo_Resume> resume_db) {
+        boolean loop = true, candidate = false;
+        boolean name_loop = true;
         Scanner keybd = new Scanner(System.in);
-        boolean loop = true;
+        String name = "";
 
-        do {
 
-            System.out.println("\nWelcome to Beginner's Resume Application" + "\n=============================================");
-            System.out.println("\nPlease select one of the numerical option below:");
-            System.out.println("1. Input new resume data");
-            System.out.println("2. View resume of specific candidate");
-            System.out.println("3. Change resume data for specific candidate");
-            System.out.println("4. Search skill from Resume Database");
-            System.out.println("5. Display all resumes. Exit program  \n\nSelection: ");
-            selection = keybd.nextInt();
-            switch (selection) {
-                case 1: {
-                    resume_db.add(inputResume());
-                }
-                break;
-                case 2: {
-                    System.out.println("\nEnter name of candidate on resume you want to view: ");
-                    candidate_name = keybd.nextLine();
-                    System.out.println(candidate_name);
-                    main_menu = true;
-                    //System.out.println(resume_db.get(0).displayResume());
-                    /*
-                    for (int i = 0; i < resume_db.size(); i++) {
-                        //resume_map.put(resume_db.get(i).getName(), resume_db.get(i));
-                        if (resume_db.get(i).getName().equalsIgnoreCase(candidate_name)) {
-                            System.out.println(resume_db.get(i).displayResume());
-                            System.out.println("------------------------------------------");
-                        }
-                    }
-                }
-                break;
-                case 3: {
-                }
-                break;
-                case 4: {
-                }
-                break;
-                case 5: {
-                    for (int i = 0; i < resume_db.size(); i++) {
-                        System.out.println(resume_db.get(i).displayResume());
-                        System.out.println("------------------------------------------");
-                    }
-                    loop = false;
-                }
-                break;
-                default:
-                    break;
+        while (name_loop) {
+            System.out.println("\nEnter name of candidate on resume you want to view: \n(First Name <space> Last Name.  Capitalize first letters.)");
+            name = keybd.nextLine();
+
+            if (name.matches( "[A-Z][a-z]+( [A-Z][a-z]+)?"))
+                name_loop = false;
+            else
+                System.out.println("Invalid input. Please enter name in format (First Name <space> Last Name with Capitalize first letters.");
+
+        }
+
+            for (int i = 0; i < resume_db.size(); i++) {
+                if (resume_db.get(i).getName().equalsIgnoreCase(name)) {
+                    System.out.println(resume_db.get(i).displayResume());
+                    System.out.println("-------------------------------------------");
+                    candidate = true;
+                } else candidate = false;
+
+            }
+
+            if (candidate == false) {
+                System.out.println("Resume not found.");
+
             }
 
 
-
-            //       System.out.println(c.displayResume());
-        } while (loop);
     }
-*/
+
+    public static void changeResume(ArrayList<Robo_Resume> resume_db) {
+
+        boolean loop = true, candidate = false;
+        boolean name_loop = true;
+        Scanner keybd = new Scanner(System.in);
+        String name = "";
+
+
+        while (name_loop) {
+            System.out.println("\nEnter name of candidate on resume you want to change: \n(First Name <space> Last Name.  Capitalize first letters.)");
+            name = keybd.nextLine();
+
+            if (name.matches( "[A-Z][a-z]+( [A-Z][a-z]+)?"))
+                name_loop = false;
+            else
+                System.out.println("Invalid input. Please enter name in format (First Name <space> Last Name with Capitalize first letters.");
+
+        }
+
+        for (int i = 0; i < resume_db.size(); i++) {
+            if (resume_db.get(i).getName().equalsIgnoreCase(name)) {
+                candidate = true;
+                changeResumeData_Menu(resume_db, i);
+            } else candidate = false;
+
+        }
+
+        if (!candidate)   System.out.println("Resume not found.");
+
+
+    }
+
+
+    public static void changeResumeData_Menu(ArrayList<Robo_Resume> resume_db, int index) {
+
+        Scanner keybd = new Scanner(System.in);
+        boolean change_data_menu = true;
+        int selection = 0;
+
+        while (change_data_menu) {
+
+            System.out.println("\nWhat data on the resume you would like to change?");
+            System.out.println("1. Name");
+            System.out.println("2. Phone Number");
+            System.out.println("3. Email address");
+            System.out.println("4. Education (Not Activated)");
+            System.out.println("5. Experience (Not Activated)");
+            System.out.println("6. Skillset (Not Activated)");
+            System.out.println("7. Exit to Main Menu \n\nSelection:");
+            selection = keybd.nextInt();
+            switch (selection) {
+                case 1:
+                    changeResumeData_Name(resume_db, index);
+                    break;
+
+                case 2:
+                    changeResumeData_Phone(resume_db, index);
+                    break;
+
+                case 3:
+                    changeResumeData_Email(resume_db, index);
+                    break;
+                case 4:
+                    System.out.println((char)27 +"[31m" + "This feature has not been activated yet." + (char)27 + "[30m");
+                    break;
+                case 5:
+                    System.out.println((char)27 +"[31m" + "This feature has not been activated yet." + (char)27 + "[30m");
+                    break;
+                case 6:
+                    System.out.println((char)27 +"[31m" + "This feature has not been activated yet." + (char)27 + "[30m");
+                    break;
+                case 7:
+                    change_data_menu = false;
+                    break;
+                default:
+                    System.out.println("Invalid selection.");
+                    break;
+            }
+
+        }
+
+
+    }
+
+    public static void changeResumeData_Name(ArrayList<Robo_Resume> resume_db, int index) {
+        Scanner keybd = new Scanner(System.in);
+        String new_name = "";
+        boolean name_loop = true;
+
+        while (name_loop) {
+            System.out.println("Current name on the resume you want to change is: " + (char) 27 + "[31m" + resume_db.get(index).getName() + (char) 27 + "[30m");
+            System.out.println("Enter the new name you want for this resume:");
+            new_name = keybd.nextLine();
+            if (resume_db.get(index).validateName(new_name)) {
+                resume_db.get(index).setName(new_name);
+                System.out.println("Name successfully changed.");
+                name_loop = false;
+            }
+            else System.out.println("Invalid input. Please enter name in format (First Name <space> Last Name with Capitalized first letters).");
+        }
+    }
+
+    public static void changeResumeData_Phone(ArrayList<Robo_Resume> resume_db, int index) {
+        Scanner keybd = new Scanner(System.in);
+        String new_phone = "";
+        boolean phone_loop = true;
+
+        while (phone_loop) {
+            System.out.println("Current phone number on this resume is: " + (char) 27 + "[31m" + resume_db.get(index).getPhone() + (char) 27 + "[30m");
+            System.out.println("Enter the new contact phone number you want for this resume: \n(Digits only or digits with dashes)");
+            new_phone = keybd.nextLine();
+            if (resume_db.get(index).isPhoneValid(new_phone)) {
+                resume_db.get(index).setPhone(new_phone);
+                System.out.println("Phone number successfully changed.");
+                phone_loop = false;
+            }
+            else System.out.println("Invalid input. Please enter phone number with digits only or digits with dashes.");
+        }
+    }
+
+    public static void changeResumeData_Email(ArrayList<Robo_Resume> resume_db, int index) {
+        Scanner keybd = new Scanner(System.in);
+        String new_email = "";
+        boolean email_loop = true;
+
+        while (email_loop) {
+            System.out.println("Current email on the resume you want to change is: " + (char) 27 + "[31m" + resume_db.get(index).getEmail() + (char) 27 + "[30m");
+            System.out.println("Enter the new email you want for this resume: \n(Format string@company.com)");
+            new_email = keybd.nextLine();
+            if (resume_db.get(index).isEmailValid(new_email)) {
+                resume_db.get(index).setName(new_email);
+                System.out.println("Email successfully changed.");
+                email_loop = false;
+            }
+            else System.out.println("Invalid input. Please enter email in the format string@company.com.");
+        }
+    }
+
     public static Robo_Resume inputResume() {
         Robo_Resume input_resume = new Robo_Resume();
         Scanner keybd = new Scanner(System.in);
@@ -161,18 +262,48 @@ public class ResumeApp {
         String choice_ed = "";
         String graduate_ed = "";
         String additional_ed = "";
+
+        String name  = "";
+        String phone = "";
+        String email = "";
+
         boolean loop_ed = false;
+
+        boolean name_loop = true;
+        boolean phone_loop = true;
+        boolean email_loop = true;
+
         int counter_ed = 0;
 
 
         // Section: Input Basic details
         System.out.println("\n--------------------------------------------- ");
-        System.out.println("\nEnter Name of candidate to display on resume: ");
-        input_resume.setName(keybd.nextLine());
-        System.out.println("Enter contact phone number of candidate: ");
-        input_resume.setPhone(keybd.nextLine());
-        System.out.println("Enter contact email of candidate: ");
-        input_resume.setEmail(keybd.nextLine());
+        while (name_loop) {
+            System.out.println("\nEnter Name of candidate to display on resume: \n(First Name <space> Last Name.  Capitalized first letters.)");
+            name = keybd.nextLine();
+            if (input_resume.validateName(name)) {
+                input_resume.setName(name);
+                name_loop = false;
+            } else System.out.println("Invalid input. Please enter name in format (First Name <space> Last Name with Capitalized first letters).");
+        }
+
+        while (phone_loop) {
+            System.out.println("\nEnter contact phone number of candidate: \n(Digits only or digits with dashes)");
+            phone = keybd.nextLine();
+            if (input_resume.isPhoneValid(phone)) {
+                input_resume.setPhone(phone);
+                phone_loop = false;
+            } else System.out.println("Invalid input. Please enter phone number with digits only or digits with dashes.");
+        }
+
+        while (email_loop) {
+            System.out.println("\nEnter contact email of candidate: \n(Format string@company.com)");
+            email = keybd.nextLine();
+            if (input_resume.isEmailValid(email)) {
+                input_resume.setEmail(email);
+                email_loop = false;
+            } else System.out.println("Invalid input. Please enter email in the format string@company.com.");
+        }
 
 
         // Section: Input Education
@@ -243,7 +374,7 @@ public class ResumeApp {
             while (loop_duty) {
                 System.out.println("Enter duty description:");
                 input_resume.getExperience().get(counter_exp).getDuty().add(keybd.nextLine());
-                System.out.println("\nDo you have any additional duty: y/yes or n/no");
+                System.out.println("\nDid you have any additional duty: y/yes or n/no");
                 additional_duty = keybd.nextLine();
                 if (additional_duty.equalsIgnoreCase("y") || additional_duty.equalsIgnoreCase("yes"))
                     loop_duty = true;
@@ -271,7 +402,7 @@ public class ResumeApp {
         boolean loop_skills = false;
 
 
-        System.out.println("\nDo you have any skill(s) you would like to input? ");
+        System.out.println("\nDo you have any skill(s) you would like to input? y/yes or n/no ");
         choice_skills = keybd.nextLine();
         if (choice_skills.equalsIgnoreCase("y") || choice_skills.equalsIgnoreCase("yes"))
             loop_skills = true;
@@ -290,21 +421,5 @@ public class ResumeApp {
 
         return input_resume;
     }
-
-
-    public static void viewResume() {
-        boolean loop = true;
-        Scanner keybd = new Scanner(System.in);
-        String name = "";
-
-        do {
-            System.out.println("Enter name of candidate on resume to view:");
-            name = keybd.next();
-
-        } while (loop);
-
-
-    }
-
 
 }

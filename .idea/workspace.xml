@@ -4,10 +4,8 @@
     <list default="true" id="18ae20fb-6fa1-4b1a-87f7-1ebc3458e49f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Resume_App/com/company/ResumeApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Resume_App/com/company/ResumeApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Resume_App/com/company/Resume_DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Resume_App/com/company/Resume_DB.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Resume_App/com/company/Robo_Resume.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Resume_App/com/company/Robo_Resume.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/ResumeApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ResumeApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Resume_DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Resume_DB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Robo_Resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Robo_Resume.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Robo_Resume$ResumeApp.ic" NAME="ResumeApp Coverage Results" MODIFIED="1550528722080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Robo_Resume$ResumeApp.ic" NAME="ResumeApp Coverage Results" MODIFIED="1550616437739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -36,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/ResumeApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="86" column="16" lean-forward="true" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+            <state relative-caret-position="855">
+              <caret line="329" column="49" lean-forward="true" selection-start-line="329" selection-start-column="49" selection-end-line="329" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Robo_Resume.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="59" column="63" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="63" />
+            <state relative-caret-position="111">
+              <caret line="110" column="56" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,8 +137,8 @@
         <option value="$PROJECT_DIR$/src/com/company/Experience.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills.java" />
         <option value="$PROJECT_DIR$/src/com/company/Resume_DB.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Robo_Resume.java" />
         <option value="$PROJECT_DIR$/src/com/company/ResumeApp.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Robo_Resume.java" />
       </list>
     </option>
   </component>
@@ -151,10 +149,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="653" />
-    <option name="y" value="8" />
-    <option name="width" value="721" />
-    <option name="height" value="713" />
+    <option name="x" value="495" />
+    <option name="y" value="21" />
+    <option name="width" value="1268" />
+    <option name="height" value="992" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -166,7 +164,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550538123218" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Simple_Hangman" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -215,15 +213,15 @@
       <workItem from="1550485730117" duration="14960000" />
       <workItem from="1550518845541" duration="10915000" />
       <workItem from="1550577476942" duration="4593000" />
+      <workItem from="1550598668640" duration="15208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56885000" />
+    <option name="totallyTimeSpent" value="72093000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="653" y="8" width="721" height="713" extended-state="0" />
-    <editor active="true" />
+    <frame x="495" y="21" width="1268" height="992" extended-state="0" />
     <layout>
       <window_info id="Capture Tool" order="0" />
       <window_info id="Learn" order="1" weight="0.329718" />
@@ -235,17 +233,17 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6446759" visible="true" weight="0.50844276" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6446759" visible="true" weight="0.4449761" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4976852" weight="0.32854578" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4976852" weight="0.326555" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5023148" side_tool="true" weight="0.32854578" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49421296" weight="0.3806104" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32894737" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49421296" weight="0.38054186" />
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
@@ -254,7 +252,7 @@
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Maven" order="6" weight="0.3298611" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.16792738" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.12417219" />
       <window_info anchor="right" id="Database" order="9" weight="0.32980332" />
     </layout>
   </component>
@@ -262,26 +260,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/ResumeApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="86" column="16" lean-forward="true" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Robo_Resume.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="59" column="63" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Recruiter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -327,6 +305,26 @@
             <element signature="e#1391#1392#0" expanded="true" />
             <element signature="e#1435#1436#0" expanded="true" />
             <element signature="e#1471#1472#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ResumeApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="329" column="49" lean-forward="true" selection-start-line="329" selection-start-column="49" selection-end-line="329" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Robo_Resume.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="110" column="56" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
