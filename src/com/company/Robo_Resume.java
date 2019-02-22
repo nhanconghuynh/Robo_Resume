@@ -26,45 +26,13 @@ public class Robo_Resume {
 
     public String displayResume() {
 
-    //    this.skillset.setSkills(new HashMap<String,String>());
-    //    this.skillset.getSkills().put("Java", "Advanced");
-
-
-
-
-        if (phone.equals("") && email.equals(""))
-
-                return "--------------------------------------------" + "\n" +
-                        name + "\n\n" +
-                        this.displayEducation(education) +
-                        this.displayExperience(experience) +
-                        this.skillset.displaySkills();
-
-        else if (phone.equals(""))
-
-                return "-------------------------------------------" + "\n" +
-                        name + "\n" + email + "\n\n" +
-                        this.displayEducation(education) +
-                        this.displayExperience(experience) +
-                        this.skillset.displaySkills();
-
-        else if (email.equals(""))
-
-                return "-------------------------------------------" + "\n" +
-                        name + "\n" + phone + "\n\n" +
-                        this.displayEducation(education) +
-                        this.displayExperience(experience)+
-                        this.skillset.displaySkills();
-
-        else
             return "-------------------------------------------" + "\n" +
                         name + "\n" +
                         phone + "\n" +
                         email + "\n\n" +
-                        this.displayEducation(education) +
-                        this.displayExperience(experience)+
+                        this.displayEducation(education) + "\n" +
+                        this.displayExperience(experience)+ "\n" +
                         this.skillset.displaySkills();
-
 
     }
 
@@ -90,18 +58,12 @@ public class Robo_Resume {
 
 
     public String getName() {
-
-        if (this.validateName(name))
         return name;
-        else return "Invalid name.";
-
     }
 
 
     public void setName(String name) {
-
         this.name = name;
-
     }
 
     public static boolean validateName( String name)
@@ -116,20 +78,16 @@ public class Robo_Resume {
     }
 
     public String getPhone() {
-
-        if (this.isPhoneValid(phone))
+//        if (this.isPhoneValid(phone))
         return phone;
-        else return "Invalid or No phone number exists for this resume.";
+//       else return "Invalid or No phone number exists for this resume.";
 
     }
 
 
 
     public void setPhone(String phone) {
-
         this.phone = phone;
-
-
     }
 
     public static boolean isPhoneValid(String phone)
@@ -150,19 +108,16 @@ public class Robo_Resume {
 
     public String getEmail() {
 
-        if (this.isEmailValid(email))
+//        if (this.isEmailValid(email))
             return email;
-        else return "Invalid or No email exists for this resume.";
+//        else return "Invalid or No email exists for this resume.";
 
     }
 
 
 
     public void setEmail(String email) {
-
         this.email = email;
-
-
     }
 
     public static boolean isEmailValid(String email)
